@@ -33,8 +33,8 @@ function lastLogCheckpoint(req, res) {
     const logger = new winston.Logger({
       transports: [
         new winston.transports.Papertrail({
-          host: 'logs4.papertrailapp.com',
-          port: 19299
+          host: ctx.data.PAPERTRAIL_HOST,
+          port: ctx.data.PAPERTRAIL_PORT
         })
       ]
     });
