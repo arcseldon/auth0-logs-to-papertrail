@@ -12,9 +12,9 @@ var modules = JSON.parse(res.getBody()).modules;
 module.exports = {
   entry: _.set({}, pkg.name, './index.js'),
   output: {
-    path: Path.join(__dirname, 'dist'),
-    filename: '[name]-'+pkg.version+'.js',
-    publicPath: '/dist/',
+    path: Path.join(__dirname, 'build'),
+    filename: 'bundle.js',
+    publicPath: '/build/',
     library: true,
     libraryTarget: 'commonjs2',
   },
